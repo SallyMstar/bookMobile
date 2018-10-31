@@ -5,20 +5,24 @@ body {
   line-height: 1.5;
 }
 body, .app {
-  background: white;
+  background-image: url('./img/woodBackground_dark.jpg');
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: cover;
+
+  
 }
 
 /* main page */
 
 .list-books-title {
   padding: 10px 0;
-  background: #2e7c31;
   text-align: center;
 }
 .list-books-title h1 {
-  font-weight: 400;
+  font-weight: bold;
   margin: 0;
-  color: white;
+  color: bisque;
 }
 
 .list-books-content {
@@ -37,7 +41,10 @@ body, .app {
 }
 
 .bookshelf-title {
-  border-bottom: 1px solid #dedede;
+  font-weight: lighter;
+  font-style: oblique;
+  color: bisque;
+  border-top: 1px solid bisque;
 }
 .bookshelf-books {
   text-align: center;
@@ -109,14 +116,19 @@ body, .app {
   list-style-type: none;
   padding: 0;
   margin: 0;
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-image: url('./img/woodBackground.jpg');
+  border-radius: 5px;
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: cover;
 }
 .books-grid li {
   padding: 10px 15px;
-  text-align: left;
+  text-align: center;
+  margin: 10px;
 }
 
 .book {
@@ -124,13 +136,17 @@ body, .app {
 }
 .book-title,
 .book-authors {
-  font-size: 0.8em;
+  font-size: 12px;
 }
 .book-title {
   margin-top: 10px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
 }
 .book-authors {
-  color: #999;
+  color: #000;
+  text-align: left;
 }
 
 .book-top {
@@ -138,6 +154,7 @@ body, .app {
   height: 200px;
   display: flex;
   align-items: flex-end;
+  box-shadow: -10px 10px 10px #5E3D12;
 }
 
 .book-shelf-changer {
@@ -164,11 +181,19 @@ body, .app {
 /* book cover */
 
 .book-cover {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #eee;
+  padding: auto;
+}
+
+.image-book-cover {
+  width: 128;
+  height: 193;
+  background-image: url('./img/bookBlank.png');
+  background-position: right;
+  background-repeat: none;
 }
 .book-cover-title {
   padding: 20px 10px 0;
-  text-align: center;
+  text-align: left;
   font-size: 0.8em;
 }

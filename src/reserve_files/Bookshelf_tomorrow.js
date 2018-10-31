@@ -4,10 +4,11 @@ import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
 import * as BooksAPI from './BooksAPI'
 
-class Bookshelf_yesterday extends Component {
-	// static propTypes = {
-	// 	books: PropTypes.array.isRequired
-	// }
+class Bookshelf_tomorrow extends Component {
+	static propTypes = {
+		books: PropTypes.array.isRequired,
+		selectShelf: PropTypes.func.isRequired
+	}
 
   state = {
 	query: '',
@@ -29,7 +30,11 @@ componentDidMount() {
           // })
           this.setState({ books })
       })
-    }
+	}
+    
+
+    // selectShelf = (choice =>
+    //   this.setState(shelf: choice))
 
 	
 	render() {
@@ -52,7 +57,7 @@ componentDidMount() {
 
 	<div className='bookshelf-books'>
 		<ol className='books-grid'>
-			{read.map((book) =>
+			{wantToRead.map((book) =>
 			<li key = {book.id} style={{
 				width: 200,
 			}}>
@@ -63,11 +68,30 @@ componentDidMount() {
 								height: 193,
 								backgroundImage: `url(${book.imageLinks.thumbnail})` 
 							}}>
+                            <div className="book-shelf-changer">
+                              <select>
+                                <option value="move" disabled>Move to...</option>
+                                <option value="currentlyReading" onClick ={() =>
+                                	this.props.selectShelf('currentlyReading')
+                                	}>
+                                	Currently Reading
+                                	</option>
+
+                                <option value="wantToRead">Want to Read</option>
+                                <option value="read">Read</option>
+                                <option value="none">None</option>
+                              </select>
+                            </div>
+
 						</div>
 					</div>
 				</div>
 				<div className='book-title'>{book.title}</div>
-				<div className= 'book-authors'>by {book.authors}</div>
+				<div className='book-authors'>by 
+					{book.authors.map((author) =>
+					<span key={book.id} className= 'book-authors'> {author}<br /> </span>
+				)}
+				</div>
 			</li>
 			)
 
@@ -79,4 +103,4 @@ componentDidMount() {
 }
 
 
-export default Bookshelf_yesterday
+export default Bookshelf_tomorrow
