@@ -49,7 +49,7 @@ updateShelf = (book, shelf) => {
       <div className="app">
           <Route exact path = '/catalog'
               render = {() => (
-                  <Catalog books={this.books} updateShelf={this.updateShelf} refreshAllBooks={this.refreshAllBooks} />
+                  <Catalog books={this.state.books} updateShelf={this.updateShelf} refreshAllBooks={this.refreshAllBooks} />
           )} />
 
         <Route exact path='/'

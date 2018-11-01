@@ -19,7 +19,7 @@ render() {
 	return (
 	                        	<div className="book-shelf-changer">
 		                             <select
-		                                value={this.state.selectedShelf}
+		                                value={book.shelf ? book.shelf : 'none'}
 		                                onChange={(e) => updateShelf(book, e.target.value)}>
 
 		                                <option value="move" disabled>Move to...</option>

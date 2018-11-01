@@ -26,7 +26,7 @@ render() {
 
 									<ShelfSelector 
 											book={book} 
-											shelf={book.shelf} 
+											shelf={book.shelf || 'none'} 
 											updateShelf={this.props.updateShelf} />
                           	</div>
                           	):(
@@ -37,15 +37,14 @@ render() {
 
 									<ShelfSelector 
 											book={book} 
-											shelf={book.shelf} 
+											shelf={book.shelf || 'none'} 
 											updateShelf={this.props.updateShelf} />
                           	</div>
                           	)}
 
                        </div>
                           	<div className="book-title">{book.title}</div>
-							<div className='book-authors'>by 
-								{book.authors && book.authors.join(' & ') || "Author Unlisted"}
+							<div className='book-authors'> by {book.authors && book.authors.join(' & ') || "Author Unlisted"}
 							</div>
                         </div>
 

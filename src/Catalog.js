@@ -17,26 +17,39 @@ class Catalog extends Component {
 
 	bookFinder = (searchTerm) => {
 		this.setState({query: searchTerm})
-		this.catalogSearch()
+		this.catalogSearch(searchTerm)
 	}
 
-	catalogSearch = () => {
-		if(this.state.query === '') {
+	catalogSearch = (searchTerm) => {
+		if(!searchTerm.trim()) {
 			this.setState({error: false, books: []})
 			return
 		} else {
 		BooksAPI
-			.search(this.state.query)
+			.search(searchTerm)
 			.then(response => {
+				let shelvedBooks = this.props.books
 				if(response.length) {
+					response.map((result) => {
+						result.shelf = 'none'
+						shelvedBooks.map((shelved) => {
+							if(result.id === shelved.id) {
+								result.shelf = shelved.shelf
+							}
+						})
+					})
 				this.setState({books: response})
+				} else {
+				this.setState({error: true, books: []})
 				}})
 		}
 	}
 
 	render() {
 		const books = this.state.books
+		const shelvedBooks = this.props.books
 		console.log(books)
+		console.log(shelvedBooks)
 		return (
 
           <div className="search-books">
