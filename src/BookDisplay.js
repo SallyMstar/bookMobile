@@ -26,7 +26,7 @@ render() {
 
 									<ShelfSelector 
 											book={book} 
-											shelf={book.shelf || 'none'} 
+											shelf={book.shelf} 
 											updateShelf={this.props.updateShelf} />
                           	</div>
                           	):(
@@ -37,7 +37,7 @@ render() {
 
 									<ShelfSelector 
 											book={book} 
-											shelf={book.shelf || 'none'} 
+											shelf={book.shelf} 
 											updateShelf={this.props.updateShelf} />
                           	</div>
                           	)}

@@ -32,12 +32,16 @@ updateShelf = (book, shelf) => {
           if(books.length) {
               books[0].shelf = shelf
               books.sort(sortBy('title'))
-              this.setState({books: booklist})
+              this.setState({
+                books: booklist,
+                showSearchPage: false})
           } else {
               let bookList = this.state.books
               booklist.push(book)
               booklist.sort(sortBy('title'))
-              this.setState({books: booklist})
+              this.setState({
+                books: booklist,
+                showSearchPage: false})
           }
         })
     }
