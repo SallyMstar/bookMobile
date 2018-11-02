@@ -16,7 +16,7 @@ class Catalog extends Component {
 	}
 
 	bookFinder = (searchTerm) => {
-		this.setState({query: searchTerm})
+		setTimeout(this.setState({query: searchTerm}), 250)
 		this.catalogSearch(searchTerm)
 	}
 
