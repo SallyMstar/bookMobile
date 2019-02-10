@@ -17,6 +17,7 @@ componentDidMount() {
       BooksAPI.getAll().then((books) => {
       books.sort(sortBy('title'))
           this.setState({books: books})
+          console.log(books)
       })
     }
 

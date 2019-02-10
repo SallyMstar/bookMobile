@@ -1,14 +1,14 @@
 {
   "main.css": "/bookmobile/build/static/css/main.d6b080ff.chunk.css",
-  "main.js": "/bookmobile/build/static/js/main.acfadd5d.chunk.js",
-  "main.js.map": "/bookmobile/build/static/js/main.acfadd5d.chunk.js.map",
+  "main.js": "/bookmobile/build/static/js/main.6a4f7081.chunk.js",
+  "main.js.map": "/bookmobile/build/static/js/main.6a4f7081.chunk.js.map",
   "static/js/1.ce208357.chunk.js": "/bookmobile/build/static/js/1.ce208357.chunk.js",
   "static/js/1.ce208357.chunk.js.map": "/bookmobile/build/static/js/1.ce208357.chunk.js.map",
   "runtime~main.js": "/bookmobile/build/static/js/runtime~main.41e364d5.js",
   "runtime~main.js.map": "/bookmobile/build/static/js/runtime~main.41e364d5.js.map",
-  "static/media/App.css": "/bookmobile/build/static/media/arrow-drop-down.78c6f53b.svg",
+  "static/media/App.css": "/bookmobile/build/static/media/add.bb9363b8.svg",
   "static/css/main.d6b080ff.chunk.css.map": "/bookmobile/build/static/css/main.d6b080ff.chunk.css.map",
   "index.html": "/bookmobile/build/index.html",
-  "precache-manifest.476b8d42507822f2ec21dd921022d921.js": "/bookmobile/build/precache-manifest.476b8d42507822f2ec21dd921022d921.js",
+  "precache-manifest.887dabfc09fea2150df4540b8283006f.js": "/bookmobile/build/precache-manifest.887dabfc09fea2150df4540b8283006f.js",
   "service-worker.js": "/bookmobile/build/service-worker.js"
 }

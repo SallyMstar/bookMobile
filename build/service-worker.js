@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/bookmobile/build/precache-manifest.476b8d42507822f2ec21dd921022d921.js"
+  "/bookmobile/build/precache-manifest.887dabfc09fea2150df4540b8283006f.js"
 );
 
 workbox.clientsClaim();

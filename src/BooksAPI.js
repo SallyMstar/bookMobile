@@ -9,7 +9,7 @@ if (!token)
 
 const headers = {
   'Accept': 'application/json',
-  'Authorization': token
+  'Authorization': 'sample-react-app'
 }
 
 export const get = (bookId) =>
@@ -27,7 +27,7 @@ export const update = (book, shelf) =>
     method: 'PUT',
     headers: {
       ...headers,
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json'                                                                                                                
     },
     body: JSON.stringify({ shelf })
   }).then(res => res.json())
